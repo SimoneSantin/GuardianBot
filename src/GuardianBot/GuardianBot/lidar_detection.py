@@ -24,7 +24,7 @@ class LidarListener(Node):
 
         self.get_logger().info(f"Front: {front:.2f} m, Left: {left:.2f} m, Right: {right:.2f} m")
 
-        if front < 0.5:
+        if left < 0.5:
             self.get_logger().warn("Obstacle detected ahead!")
             alert_msg = String()
             alert_msg.data = "Obstacle detected ahead!"
